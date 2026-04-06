@@ -7,13 +7,13 @@ import { FaLink } from "react-icons/fa6";
 export default function Projects() {
   return (
     <Section id="projects">
-      <div>
-        <h2 className="text-5xl font-bold mb-10">Projects</h2>
-        <p className=" text-xl mb-10">
+      <div className="mb-12">
+        <h2 className="text-4xl font-bold mb-3">Projects</h2>
+        <p className="text-gray-400">
           Building solutions that solve real-world problems
         </p>
+        <div className="w-16 h-1 bg-cyan-500 mt-4"></div>
       </div>
-
 
       <div className="grid md:grid-cols-3 gap-6">
         {projects.map((p, i) => (
