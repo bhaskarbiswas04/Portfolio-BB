@@ -22,7 +22,7 @@ export default function Contact() {
               href={item.link}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
-              className="border border-gray-800 rounded-xl p-6 flex gap-4 items-start hover:bg-gray-900/40 transition"
+              className="border rounded-xl p-6 flex gap-4 items-start hover:bg-gray-900/40 transition"
             >
               <div className="text-cyan-500 mt-1">
                 <Icon size={22} />

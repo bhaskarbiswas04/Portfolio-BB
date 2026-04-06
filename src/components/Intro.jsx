@@ -1,6 +1,6 @@
 import Section from "./Section";
 
-export default function Hero() {
+export default function Intro() {
   return (
     <Section>
       <div className="text-center space-y-6">

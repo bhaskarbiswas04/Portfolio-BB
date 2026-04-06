@@ -34,7 +34,7 @@ export default function Projects() {
               {p.tech.map((t, i) => (
                 <span
                   key={i}
-                  className="text-xs bg-indigo-100 dark:bg-indigo-900 px-2 py-1 rounded"
+                  className="text-xs bg-indigo-100 dark:bg-cyan-900 px-2 py-1 rounded"
                 >
                   {t}
                 </span>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Intro from "./components/Intro";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="bg-white dark:bg-[#0f172a] text-gray-800 dark:text-gray-200 transition-colors duration-300">
       <Navbar dark={dark} setDark={setDark} />
-      <Hero />
+      <Intro />
       <Projects />
       <TechStack />
       <Contact />
