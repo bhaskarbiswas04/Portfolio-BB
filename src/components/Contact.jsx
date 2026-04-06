@@ -20,6 +20,7 @@ export default function Contact() {
             <motion.a
               key={i}
               href={item.link}
+              target="_blank"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
               className="border rounded-xl p-6 flex gap-4 items-start hover:bg-gray-900/40 transition"

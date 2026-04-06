@@ -6,18 +6,18 @@ export const contacts = [
     title: "Gmail",
     desc: "04bhaskarbiswas@gmail.com",
     icon: IoMail,
-    link: "mailto:04bhaskarbiswas@gmail.com",
+    link: "https://mail.google.com/mail/?view=cm&to=04bhaskarbiswas@gmail.com",
   },
   {
     title: "GitHub",
     desc: "Follow on GitHub",
     icon: FaGithub,
-    link: "#",
+    link: "https://github.com/bhaskarbiswas04",
   },
   {
     title: "LinkedIn",
     desc: "Connect on LinkedIn",
     icon: FaLinkedin,
-    link: "#",
+    link: "https://www.linkedin.com/in/bhaskarb04/",
   },
 ];
