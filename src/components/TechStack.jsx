@@ -2,17 +2,31 @@ import Section from "./Section";
 import { motion } from "motion/react";
 
 export default function TechStack() {
-  const techs = ["React", "Node.js", "Express", "MongoDB", "Tailwind"];
+  const techs = [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "TailwindCSS",
+    "Bootstrap",
+    "JWT",
+    "Git",
+    "GitHub",
+    "Redux",
+    "Mongoose",
+    "Vercel",
+    "VS Code",
+  ];
 
   return (
-    <Section>
+    <Section id="tech_stack">
       <div className="mb-12">
         <h2 className="text-4xl font-bold mb-3">Tech Stack</h2>
         <p className="text-gray-400">Technologies and tools I work with</p>
         <div className="w-18 h-1 bg-cyan-500 mt-4"></div>
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-12">
         {techs.map((tech, i) => (
           <motion.span
             key={i}

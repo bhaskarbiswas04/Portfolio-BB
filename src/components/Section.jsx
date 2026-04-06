@@ -8,7 +8,7 @@ export default function Section({ children, id }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="py-20 px-6 max-w-6xl mx-auto"
+      className="py-18 px-6 max-w-6xl mx-auto"
     >
       {children}
     </motion.section>

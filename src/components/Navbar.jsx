@@ -13,17 +13,9 @@ export default function Navbar({ dark, setDark }) {
 
         <div className="flex items-center gap-6">
           <a href="#projects">Projects</a>
+          <a href="#tech_stack">Technologies</a>
           <a href="#contact">Contact</a>
 
-          <button
-            onClick={() => setDark(!dark)}
-            className={clsx(
-              "px-3 py-1 rounded border transition",
-              dark ? "bg-white text-black" : "bg-black text-white",
-            )}
-          >
-            {dark ? "Light" : "Dark"}
-          </button>
         </div>
       </div>
     </nav>
