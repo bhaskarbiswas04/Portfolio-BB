@@ -23,7 +23,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
             whileHover={{ scale: 1.05 }}
-            className="border rounded-xl p-5 space-y-4 hover:shadow-lg transition"
+            className="border rounded-xl p-5 min-h-85 flex flex-col justify-between hover:shadow-lg transition"
           >
             <h3 className="text-xl font-semibold">{p.name}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -44,13 +44,26 @@ export default function Projects() {
             <div className="flex gap-6 text-sm">
               <a
                 href={p.live}
+                target="_blank"
                 className="flex items-center gap-1 text-cyan-500"
               >
                 <FaLink size={20} /> Live
               </a>
 
-              <a href={p.github} className="flex items-center gap-1">
-                <FaCode size={20} /> Code
+              <a
+                href={p.frontend}
+                className="flex items-center gap-1"
+                target="_blank"
+              >
+                <FaCode size={20} /> Frontend
+              </a>
+
+              <a
+                href={p.backend}
+                className="flex items-center gap-1"
+                target="_blank"
+              >
+                <FaCode size={20} /> Backend
               </a>
             </div>
           </motion.div>
