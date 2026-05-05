@@ -26,7 +26,7 @@ export default function Contact() {
               className="border rounded-xl p-6 flex gap-4 items-start hover:bg-gray-900/40 transition"
             >
               <div className="text-cyan-500 mt-1">
-                <Icon size={22} />
+                <Icon size={22} /> 
               </div>
 
               <div>
