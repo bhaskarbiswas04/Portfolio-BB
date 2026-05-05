@@ -27,7 +27,7 @@ export default function Contact() {
             >
               <div className="text-cyan-500 mt-1">
                 <Icon size={22} /> 
-              </div> 
+              </div>
 
               <div>
                 <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
