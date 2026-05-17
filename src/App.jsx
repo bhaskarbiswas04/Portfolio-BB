@@ -13,7 +13,7 @@ export default function App() {
     <div className="dark:bg-[#0f172a] text-gray-800 dark:text-gray-200 transition-colors duration-300">
       <Navbar dark={dark} setDark={setDark} />
       <Intro />
-      <Projects /> 
+      <Projects />
       <TechStack />
       <Contact />
       <Footer />
