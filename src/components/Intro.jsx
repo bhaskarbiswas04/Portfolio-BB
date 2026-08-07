@@ -1,35 +1,22 @@
-import Section from "./Section";
+import { motion as Motion } from "motion/react";
+import { FaArrowDown, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Intro() {
-  return (
-    <Section>
-      <div className="text-center space-y-6">
-        <p className="max-w-xl mx-auto text-cyan-400 text-lg">
-          I'm Bhaskar — a MERN Stack Developer focused on clean UI, performance,
-          and real-world applications.
-        </p>
-
-        <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-          Building Scalable Web Experiences
-        </h2>
-
-        <div className="flex justify-center gap-4">
-          <a
-            href="#contact"
-            className="bg-cyan-600 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition"
-          >
-            Contact Me
-          </a>
-
-          <a
-            href="/BhaskarBiswas_Resume.pdf"
-            download
-            className="border px-6 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-          >
-            Download Resume
-          </a>
-        </div>
-      </div>
-    </Section>
-  );
+  return <section className="hero" id="top">
+    <div className="hero-grid" /><div className="orb orb-one" /><div className="orb orb-two" />
+    <div className="container hero-inner">
+      <Motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
+        <p className="eyebrow"><span className="status-dot" /> Available for opportunities</p>
+        <h1>Building the web<br /><em>people remember.</em></h1>
+        <p className="hero-copy">I’m Bhaskar, a MERN Stack Developer who turns product ideas into thoughtful, performant web experiences—from crisp interfaces to dependable APIs.</p>
+        <div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work <span>↘</span></a><a className="button button-ghost" href="/BhaskarBiswas_Resume.pdf" download>Download résumé <FaArrowDown /></a></div>
+      </Motion.div>
+      <Motion.aside className="hero-aside" initial={{ opacity: 0, x: 25 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.65, delay: 0.16 }}>
+        <div className="code-window"><div className="code-head"><span /><span /><span /><b>developer.js</b></div><pre><code><i>const</i> developer = {'{'}{`\n`}  name: <strong>"Bhaskar"</strong>,{`\n`}  stack: [<strong>"MongoDB"</strong>, <strong>"Express"</strong>,{`\n`}          <strong>"React"</strong>, <strong>"Node.js"</strong>],{`\n`}  ships: <i>true</i>{`\n`}{'}'};</code></pre></div>
+        <div className="hero-note"><span>01</span><p>Clean systems.<br />Intentional details.</p></div>
+      </Motion.aside>
+    </div>
+    <div className="container scroll-cue"><span>SCROLL TO EXPLORE</span><div /></div>
+    <div className="hero-social"><a href="https://github.com/bhaskarbiswas04" target="_blank" rel="noreferrer"><FaGithub /></a><a href="https://www.linkedin.com/in/bhaskarb04/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a></div>
+  </section>;
 }

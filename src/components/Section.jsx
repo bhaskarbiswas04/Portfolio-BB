@@ -1,16 +1,5 @@
-import { motion } from "motion/react";
+import { motion as Motion } from "motion/react";
 
-export default function Section({ children, id }) {
-  return (
-    <motion.section
-      id={id}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-      className="py-18 px-6 max-w-6xl mx-auto"
-    >
-      {children}
-    </motion.section>
-  );
+export default function Section({ children, id, className = "" }) {
+  return <Motion.section id={id} className={`section container ${className}`} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.65 }}>{children}</Motion.section>;
 }

@@ -1,74 +1,14 @@
 import Section from "./Section";
 import { projects } from "../data/projects";
-import { motion } from "motion/react";
-import { FaCode } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
+import { motion as Motion } from "motion/react";
+import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 export default function Projects() {
-  return (
-    <Section id="projects">
-      <div className="mb-12">
-        <h2 className="text-4xl font-bold mb-3">Projects</h2>
-        <p className="text-gray-400">
-          Building solutions that solve real-world problems
-        </p>
-        <div className="w-16 h-1 bg-cyan-500 mt-4"></div>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            whileHover={{ scale: 1.05 }}
-            className="border rounded-xl p-5 min-h-85 flex flex-col justify-between hover:shadow-lg transition"
-          >
-            <h3 className="text-xl font-semibold">{p.name}</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {p.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              {p.tech.map((t, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-indigo-100 dark:bg-cyan-900 px-2 py-1 rounded"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex gap-6 text-sm">
-              <a
-                href={p.live}
-                target="_blank"
-                className="flex items-center gap-1 text-cyan-500"
-              >
-                <FaLink size={20} /> Live
-              </a>
-
-              <a
-                href={p.frontend}
-                className="flex items-center gap-1"
-                target="_blank"
-              >
-                <FaCode size={20} /> Frontend
-              </a>
-
-              <a
-                href={p.backend}
-                className="flex items-center gap-1"
-                target="_blank"
-              >
-                <FaCode size={20} /> Backend
-              </a>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </Section>
-  );
+  return <Section id="projects">
+    <div className="section-heading"><div><p className="eyebrow">Selected work <span>01</span></p><h2>Built for people.<br /><em>Engineered to scale.</em></h2></div><p>Projects that balance an intuitive user experience with the technical foundations that make products reliable.</p></div>
+    <div className="project-list">{projects.map((project, index) => <Motion.article className="project-card" key={project.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
+      <div className={`project-visual visual-${index + 1}`}><span className="project-index">0{index + 1}</span><div className="visual-art">{index === 0 && <><b>WYNK</b><div className="product-row" /><div className="product-row short" /></>}{index === 1 && <><b>ANVAYA</b><div className="chart-bars"><i /><i /><i /><i /></div></>}{index === 2 && <><b>quick.chat</b><div className="chat-bubble">Hey, ready to build?</div><div className="chat-bubble alt">Absolutely. ✨</div></>}</div></div>
+      <div className="project-details"><div><p className="project-kind">{project.type}</p><h3>{project.name}</h3></div><p className="project-description">{project.description}</p><div className="tags">{project.tech.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.live} target="_blank" rel="noreferrer" className={project.live === "#" ? "disabled" : ""}>Live preview <FaArrowUpRightFromSquare /></a><a href={project.frontend} target="_blank" rel="noreferrer"><FaGithub /> Code</a></div></div>
+    </Motion.article>)}</div>
+  </Section>;
 }

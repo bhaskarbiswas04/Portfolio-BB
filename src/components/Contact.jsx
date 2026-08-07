@@ -1,42 +1,4 @@
 import Section from "./Section";
-import { motion } from "motion/react";
-import { contacts } from "../data/contacts";
-
-export default function Contact() {
-  return (
-    <Section id="contact">
-      <div className="mb-12">
-        <h2 className="text-4xl font-bold mb-3">Connect</h2>
-        <p className="text-gray-400">
-          Let's collaborate on something amazing together
-        </p>
-        <div className="w-16 h-1 bg-cyan-500 mt-4"></div>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {contacts?.map((item, i) => {
-          const Icon = item.icon;
-          return (
-            <motion.a
-              key={i}
-              href={item.link}
-              target="_blank"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.2 }}
-              className="border rounded-xl p-6 flex gap-4 items-start hover:bg-gray-900/40 transition"
-            >
-              <div className="text-cyan-500 mt-1">
-                <Icon size={22} />
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-400">{item.desc}</p>
-              </div>
-            </motion.a>
-          );
-        })}
-      </div>
-    </Section>
-  );
-}
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+export default function Contact() { return <Section id="contact"><div className="contact-panel"><p className="eyebrow">Have a project in mind? <span>03</span></p><h2>Let’s make something<br /><em>meaningful.</em></h2><p>Whether you’re shaping a new product or improving an existing one, I’d love to hear what you’re working on.</p><a className="contact-email" href="mailto:04bhaskarbiswas@gmail.com">04bhaskarbiswas@gmail.com <span>↗</span></a><div className="contact-links"><a href="https://github.com/bhaskarbiswas04" target="_blank" rel="noreferrer"><FaGithub /> GitHub</a><a href="https://www.linkedin.com/in/bhaskarb04/" target="_blank" rel="noreferrer"><FaLinkedinIn /> LinkedIn</a><a href="mailto:04bhaskarbiswas@gmail.com"><HiOutlineMail /> Email</a></div></div></Section>; }
